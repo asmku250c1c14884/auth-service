@@ -1,0 +1,333 @@
+/* 
+   VALENTIA - Premium Boutique Design System
+   Palette: Obsidian Black (#000000), Lustrous Gold (#C5A021), Ivory Cream (#F5F5F0)
+*/
+
+:root {
+    --obsidian: #000000;
+    --gold: #C5A021;
+    --gold-light: #D4AF37;
+    --gold-glow: rgba(197, 160, 33, 0.3);
+    --ivory: #F5F5F0;
+    --cream: #FAF9F6;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+
+    --transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--obsidian);
+    color: var(--ivory);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* --- Layout Components --- */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 8rem 0;
+}
+
+/* --- Navigation --- */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1.5rem 0;
+    transition: all 0.4s var(--transition);
+}
+
+nav.scrolled {
+    padding: 1rem 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--ivory);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* --- Hero Section --- */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.hero-content {
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s var(--transition);
+}
+
+.hero-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-tagline {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s var(--transition);
+}
+
+.btn:hover {
+    background: var(--gold);
+    color: var(--obsidian);
+    box-shadow: 0 0 30px var(--gold-glow);
+}
+
+/* --- Collection Grid --- */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.item-card {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--transition);
+}
+
+.item-card:hover .item-image {
+    transform: scale(1.05);
+}
+
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    transform: translateY(20px);
+    transition: all 0.4s var(--transition);
+}
+
+.item-card:hover .item-overlay {
+    transform: translateY(0);
+}
+
+.item-brand {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.item-name {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* --- VIP Section --- */
+
+.vip-section {
+    background: var(--ivory);
+    color: var(--obsidian);
+}
+
+.vip-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.vip-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.vip-list {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.vip-list li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+}
+
+.vip-list li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    display: block;
+}
+
+.btn-dark {
+    background: var(--obsidian);
+    border: none;
+    color: var(--ivory);
+}
+
+.btn-dark:hover {
+    background: var(--gold);
+    color: var(--obsidian);
+}
+
+/* --- Animations --- */
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s var(--transition);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .vip-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}

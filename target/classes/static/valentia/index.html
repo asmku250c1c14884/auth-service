@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VALENTIA Boutique - Avant-Garde Minimalist Luxury Fashion in Tamil Nadu.">
+    <title>VALENTIA | Unapologetically Bold</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">VALENTIA</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#membership">VIP</a></li>
+                <li><a href="#about">The Brand</a></li>
+            </ul>
+            <a href="#membership" class="btn" style="padding: 0.6rem 1.5rem; font-size: 0.7rem;">Join Member</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="assets/hero.png" alt="VALENTIA Boutique Interior">
+        </div>
+        <div class="container">
+            <div class="hero-content" id="heroContent">
+                <span class="hero-tagline">Autumn / Winter 2026</span>
+                <h1>UNAPOLOGETICALLY<br>BOLD.</h1>
+                <p style="margin-bottom: 3rem; color: var(--ivory); font-size: 1.1rem; max-width: 500px;">
+                    Experience the pinnacle of luxury fashion in Tamil Nadu. Crafted for the discerning.
+                </p>
+                <div class="hero-btns">
+                    <a href="#collection" class="btn">Explore Collection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" id="collection">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p>Curated Selection</p>
+                <h2>WEEKLY LIMITED DROPS</h2>
+            </div>
+
+            <div class="collection-grid">
+                <div class="item-card fade-up">
+                    <img src="assets/collection1.png" alt="Luxury Silk Piece" class="item-image">
+                    <div class="item-overlay">
+                        <span class="item-brand">Signature Line</span>
+                        <h3 class="item-name">The Obsidian Silk Wrap</h3>
+                        <a href="#" class="btn" style="padding: 0.8rem 2rem;">Acquire</a>
+                    </div>
+                </div>
+
+                <div class="item-card fade-up" style="transition-delay: 0.2s;">
+                    <img src="assets/collection2.png" alt="Linen Collection" class="item-image">
+                    <div class="item-overlay">
+                        <span class="item-brand">Elite Collection</span>
+                        <h3 class="item-name">Midnight Linen Ensemble</h3>
+                        <a href="#" class="btn" style="padding: 0.8rem 2rem;">Acquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Section -->
+    <section class="vip-section" id="membership">
+        <div class="container">
+            <div class="vip-content">
+                <div class="vip-text fade-up">
+                    <p style="color: var(--gold); letter-spacing: 0.2em; font-weight: 600; margin-bottom: 1rem;">
+                        EXCLUSIVE ACCESS</p>
+                    <h2>THE "V" MEMBERSHIP</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        Join an elite circle of fashion enthusiasts. Enjoy early access to limited drops and
+                        personalized styling sessions in our the Obsidian Lounge.
+                    </p>
+                    <form id="membershipForm" class="vip-form"
+                        style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+                        <input type="text" id="memName" placeholder="Full Name" required
+                            style="padding: 1rem; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.1); color: var(--obsidian); font-family: var(--font-sans);">
+                        <input type="email" id="memEmail" placeholder="Email Address" required
+                            style="padding: 1rem; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.1); color: var(--obsidian); font-family: var(--font-sans);">
+                        <input type="tel" id="memPhone" placeholder="Phone Number" required
+                            style="padding: 1rem; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.1); color: var(--obsidian); font-family: var(--font-sans);">
+                        <button type="submit" class="btn btn-dark" id="memSubmitBtn">Apply for Membership</button>
+                    </form>
+                    <div id="memStatus" style="font-size: 0.9rem; margin-top: -1rem; margin-bottom: 1rem;"></div>
+                    <ul class="vip-list">
+                        <li>Priority Access to Limited Releases</li>
+                        <li>Personal In-House Styling</li>
+                        <li>Private Events & Runway Shows</li>
+                        <li>The Valentia Mirror Experience</li>
+                    </ul>
+                </div>
+                <div class="vip-visual fade-up" style="transition-delay: 0.3s;">
+                    <div
+                        style="background: var(--obsidian); height: 500px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <span
+                            style="font-family: var(--font-serif); font-size: 15rem; color: rgba(197, 160, 33, 0.1);">V</span>
+                        <div
+                            style="position: absolute; border: 1px solid var(--gold); padding: 3rem; transform: rotate(-5deg);">
+                            <h3 style="color: var(--gold); letter-spacing: 0.5em;">VALENTIA</h3>
+                            <p style="color: var(--ivory); font-size: 0.7rem; margin-top: 1rem;">ELITE MEMBER CARD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 5rem 0; background: var(--obsidian); border-top: 1px solid var(--glass-border);">
+        <div class="container">
+            <div
+                style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 3rem;">
+                <div>
+                    <h3 style="color: var(--gold); margin-bottom: 1.5rem; letter-spacing: 0.2em;">VALENTIA</h3>
+                    <p style="max-width: 300px; font-size: 0.9rem; color: #888;">
+                        Tamil Nadu's premier fashion destination. Exceptional craftsmanship, timeless elegance.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Contact Us</h4>
+                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <input type="email" id="contactEmail" placeholder="Your Email" required
+                            style="padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid #444; color: var(--ivory); font-family: var(--font-sans);">
+                        <textarea id="contactMessage" placeholder="Message" required
+                            style="padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid #444; color: var(--ivory); font-family: var(--font-sans); resize: none;"></textarea>
+                        <button type="submit" class="btn" style="padding: 0.5rem; font-size: 0.8rem;"
+                            id="contactSubmitBtn">Send</button>
+                    </form>
+                    <div id="contactStatus" style="font-size: 0.8rem; margin-top: 0.5rem;"></div>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Boutique</h4>
+                    <p style="color: #888; font-size: 0.9rem;">Chennai Main Road,<br>Madurai, Tamil
+                        Nadu<br><br>concierge@valentia.luxury<br>+91 98765 43210</p>
+                </div>
+            </div>
+            <div
+                style="margin-top: 5rem; text-align: center; border-top: 1px solid var(--glass-border); padding-top: 2rem;">
+                <p style="color: #444; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;">
+                    © 2026 VALENTIA LUXURY INC. ALL RIGHTS RESERVED.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

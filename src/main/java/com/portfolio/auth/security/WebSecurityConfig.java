@@ -30,7 +30,10 @@ public class WebSecurityConfig {
     http.csrf(csrf -> csrf.disable())
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .authorizeHttpRequests(
-            auth -> auth.requestMatchers("/", "/index.html", "/*.js", "/*.css", "/static/**").permitAll()
+            auth -> auth
+                .requestMatchers("/", "/index.html", "/valentia/**", "/**/*.js", "/**/*.css", "/**/*.png", "/**/*.jpg",
+                    "/**/*.svg")
+                .permitAll()
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/api/test/**").permitAll()
                 .requestMatchers("/api/valentia/**").permitAll()
