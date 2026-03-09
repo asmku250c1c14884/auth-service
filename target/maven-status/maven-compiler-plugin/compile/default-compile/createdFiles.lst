@@ -1,10 +1,10 @@
-com\portfolio\auth\model\User$UserBuilder.class
 com\portfolio\auth\model\User.class
-com\portfolio\auth\security\JwtUtils.class
-com\portfolio\auth\repository\UserRepository.class
 com\portfolio\auth\controller\AuthController$SignupRequest.class
 com\portfolio\auth\service\UserDetailsServiceImpl.class
-com\portfolio\auth\security\WebSecurityConfig.class
 com\portfolio\auth\controller\AuthController$LoginRequest.class
 com\portfolio\auth\controller\AuthController.class
+com\portfolio\auth\model\User$UserBuilder.class
+com\portfolio\auth\security\JwtUtils.class
+com\portfolio\auth\repository\UserRepository.class
+com\portfolio\auth\security\WebSecurityConfig.class
 com\portfolio\auth\AuthApplication.class
