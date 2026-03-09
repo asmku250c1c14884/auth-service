@@ -1,345 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Secure Authentication Portal - Login and Signup with JWT security">
-    <title>Auth Portal | Secure Login & Signup</title>
+    <meta name="description" content="VALENTIA Boutique - Avant-Garde Minimalist Luxury Fashion in Tamil Nadu.">
+    <title>VALENTIA | Unapologetically Bold</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800;900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-        <div class="orb orb-4"></div>
-        <div class="grid-overlay"></div>
-    </div>
 
-    <!-- Floating Particles -->
-    <div class="particles" id="particles"></div>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">VALENTIA</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#membership">VIP</a></li>
+                <li><a href="#about">The Brand</a></li>
+            </ul>
+            <a href="#membership" class="btn" style="padding: 0.6rem 1.5rem; font-size: 0.7rem;">Join Member</a>
+        </div>
+    </nav>
 
-    <!-- Main Container -->
-    <div class="main-container">
-        <!-- Left Panel - Branding -->
-        <div class="brand-panel">
-            <div class="brand-content">
-                <div class="logo-wrapper">
-                    <div class="logo-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M24 4L42 14V34L24 44L6 34V14L24 4Z" stroke="url(#logoGrad)" stroke-width="2.5" fill="none"/>
-                            <path d="M24 12L34 18V30L24 36L14 30V18L24 12Z" fill="url(#logoGrad2)" opacity="0.3"/>
-                            <circle cx="24" cy="24" r="5" fill="url(#logoGrad3)"/>
-                            <defs>
-                                <linearGradient id="logoGrad" x1="6" y1="4" x2="42" y2="44">
-                                    <stop stop-color="#818cf8"/>
-                                    <stop offset="1" stop-color="#c084fc"/>
-                                </linearGradient>
-                                <linearGradient id="logoGrad2" x1="14" y1="12" x2="34" y2="36">
-                                    <stop stop-color="#818cf8"/>
-                                    <stop offset="1" stop-color="#c084fc"/>
-                                </linearGradient>
-                                <linearGradient id="logoGrad3" x1="19" y1="19" x2="29" y2="29">
-                                    <stop stop-color="#e0e7ff"/>
-                                    <stop offset="1" stop-color="#c084fc"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <h1 class="brand-name">AuthPortal</h1>
-                </div>
-                <p class="brand-tagline">Enterprise-grade authentication<br>built with Spring Boot & JWT</p>
-                
-                <div class="features-list">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
-                        </div>
-                        <span>256-bit JWT Encryption</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                            </svg>
-                        </div>
-                        <span>BCrypt Password Hashing</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
-                            </svg>
-                        </div>
-                        <span>Spring Security Integration</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-                            </svg>
-                        </div>
-                        <span>PostgreSQL Database</span>
-                    </div>
-                </div>
-
-                <div class="tech-badges">
-                    <span class="badge">Java</span>
-                    <span class="badge">Spring Boot</span>
-                    <span class="badge">PostgreSQL</span>
-                    <span class="badge">JWT</span>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="assets/hero.png" alt="VALENTIA Boutique Interior">
+        </div>
+        <div class="container">
+            <div class="hero-content" id="heroContent">
+                <span class="hero-tagline">Autumn / Winter 2026</span>
+                <h1>UNAPOLOGETICALLY<br>BOLD.</h1>
+                <p style="margin-bottom: 3rem; color: var(--ivory); font-size: 1.1rem; max-width: 500px;">
+                    Experience the pinnacle of luxury fashion in Tamil Nadu. Crafted for the discerning.
+                </p>
+                <div class="hero-btns">
+                    <a href="#collection" class="btn">Explore Collection</a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Right Panel - Auth Forms -->
-        <div class="auth-panel">
-            <div class="auth-card" id="authCard">
-                <!-- Tab Switcher -->
-                <div class="tab-switcher">
-                    <button class="tab-btn active" id="loginTab" onclick="switchTab('login')">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
-                            <polyline points="10 17 15 12 10 7"/>
-                            <line x1="15" y1="12" x2="3" y2="12"/>
-                        </svg>
-                        Sign In
-                    </button>
-                    <button class="tab-btn" id="signupTab" onclick="switchTab('signup')">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="8.5" cy="7" r="4"/>
-                            <line x1="20" y1="8" x2="20" y2="14"/>
-                            <line x1="23" y1="11" x2="17" y2="11"/>
-                        </svg>
-                        Sign Up
-                    </button>
-                    <div class="tab-indicator" id="tabIndicator"></div>
-                </div>
-
-                <!-- Login Form -->
-                <form class="auth-form active" id="loginForm" onsubmit="handleLogin(event)">
-                    <div class="form-header">
-                        <h2>Welcome back</h2>
-                        <p>Enter your credentials to access your account</p>
-                    </div>
-
-                    <div class="input-group">
-                        <div class="input-wrapper">
-                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                <circle cx="12" cy="7" r="4"/>
-                            </svg>
-                            <input type="text" id="loginUsername" placeholder="Username" required autocomplete="username">
-                            <div class="input-border"></div>
-                        </div>
-                    </div>
-
-                    <div class="input-group">
-                        <div class="input-wrapper">
-                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                            </svg>
-                            <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password">
-                            <button type="button" class="toggle-password" onclick="togglePassword('loginPassword', this)">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                            </button>
-                            <div class="input-border"></div>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-btn" id="loginBtn">
-                        <span class="btn-text">Sign In</span>
-                        <span class="btn-loader">
-                            <svg width="20" height="20" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="31.4 31.4" stroke-linecap="round"/>
-                            </svg>
-                        </span>
-                        <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"/>
-                            <polyline points="12 5 19 12 12 19"/>
-                        </svg>
-                    </button>
-                </form>
-
-                <!-- Signup Form -->
-                <form class="auth-form" id="signupForm" onsubmit="handleSignup(event)">
-                    <div class="form-header">
-                        <h2>Create account</h2>
-                        <p>Sign up to get started with AuthPortal</p>
-                    </div>
-
-                    <div class="input-group">
-                        <div class="input-wrapper">
-                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                <circle cx="12" cy="7" r="4"/>
-                            </svg>
-                            <input type="text" id="signupUsername" placeholder="Username" required autocomplete="username">
-                            <div class="input-border"></div>
-                        </div>
-                    </div>
-
-                    <div class="input-group">
-                        <div class="input-wrapper">
-                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                            <input type="email" id="signupEmail" placeholder="Email address" required autocomplete="email">
-                            <div class="input-border"></div>
-                        </div>
-                    </div>
-
-                    <div class="input-group">
-                        <div class="input-wrapper">
-                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                            </svg>
-                            <input type="password" id="signupPassword" placeholder="Password" required autocomplete="new-password" minlength="6">
-                            <button type="button" class="toggle-password" onclick="togglePassword('signupPassword', this)">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                            </button>
-                            <div class="input-border"></div>
-                        </div>
-                    </div>
-
-                    <!-- Password Strength -->
-                    <div class="password-strength" id="passwordStrength">
-                        <div class="strength-bars">
-                            <div class="strength-bar"></div>
-                            <div class="strength-bar"></div>
-                            <div class="strength-bar"></div>
-                            <div class="strength-bar"></div>
-                        </div>
-                        <span class="strength-text" id="strengthText">Password strength</span>
-                    </div>
-
-                    <button type="submit" class="submit-btn" id="signupBtn">
-                        <span class="btn-text">Create Account</span>
-                        <span class="btn-loader">
-                            <svg width="20" height="20" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="31.4 31.4" stroke-linecap="round"/>
-                            </svg>
-                        </span>
-                        <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"/>
-                            <polyline points="12 5 19 12 12 19"/>
-                        </svg>
-                    </button>
-                </form>
-
-                <!-- Status Message -->
-                <div class="status-message" id="statusMessage">
-                    <div class="status-icon"></div>
-                    <span class="status-text"></span>
-                </div>
+    <!-- Collection Section -->
+    <section class="collection" id="collection">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p>Curated Selection</p>
+                <h2>WEEKLY LIMITED DROPS</h2>
             </div>
 
-            <!-- Dashboard (shown after login) -->
-            <div class="dashboard-card hidden" id="dashboardCard">
-                <div class="dashboard-header">
-                    <div class="user-avatar" id="userAvatar">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
+            <div class="collection-grid">
+                <div class="item-card fade-up">
+                    <img src="assets/collection1.png" alt="Luxury Silk Piece" class="item-image">
+                    <div class="item-overlay">
+                        <span class="item-brand">Signature Line</span>
+                        <h3 class="item-name">The Obsidian Silk Wrap</h3>
+                        <a href="#" class="btn" style="padding: 0.8rem 2rem;">Acquire</a>
                     </div>
-                    <div class="user-info">
-                        <h3 id="welcomeUser">Welcome!</h3>
-                        <p class="user-status">
-                            <span class="status-dot"></span>
-                            Authenticated
-                        </p>
-                    </div>
-                    <button class="logout-btn" onclick="handleLogout()">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-                            <polyline points="16 17 21 12 16 7"/>
-                            <line x1="21" y1="12" x2="9" y2="12"/>
-                        </svg>
-                        Logout
-                    </button>
                 </div>
 
-                <div class="token-display">
-                    <div class="token-header">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                        </svg>
-                        <span>JWT Token</span>
-                        <button class="copy-btn" onclick="copyToken()">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                            </svg>
-                            Copy
-                        </button>
+                <div class="item-card fade-up" style="transition-delay: 0.2s;">
+                    <img src="assets/collection2.png" alt="Linen Collection" class="item-image">
+                    <div class="item-overlay">
+                        <span class="item-brand">Elite Collection</span>
+                        <h3 class="item-name">Midnight Linen Ensemble</h3>
+                        <a href="#" class="btn" style="padding: 0.8rem 2rem;">Acquire</a>
                     </div>
-                    <code class="token-value" id="tokenValue">—</code>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="dashboard-stats">
-                    <div class="stat-card">
-                        <div class="stat-icon green">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-label">Security</span>
-                            <span class="stat-value">HS256</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon blue">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                            </svg>
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-label">Expires</span>
-                            <span class="stat-value">24h</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon purple">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-                            </svg>
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-label">Database</span>
-                            <span class="stat-value">PostgreSQL</span>
+    <!-- VIP Section -->
+    <section class="vip-section" id="membership">
+        <div class="container">
+            <div class="vip-content">
+                <div class="vip-text fade-up">
+                    <p style="color: var(--gold); letter-spacing: 0.2em; font-weight: 600; margin-bottom: 1rem;">
+                        EXCLUSIVE ACCESS</p>
+                    <h2>THE "V" MEMBERSHIP</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        Join an elite circle of fashion enthusiasts. Enjoy early access to limited drops and
+                        personalized styling sessions in our the Obsidian Lounge.
+                    </p>
+                    <form id="membershipForm" class="vip-form"
+                        style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+                        <input type="text" id="memName" placeholder="Full Name" required
+                            style="padding: 1rem; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.1); color: var(--obsidian); font-family: var(--font-sans);">
+                        <input type="email" id="memEmail" placeholder="Email Address" required
+                            style="padding: 1rem; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.1); color: var(--obsidian); font-family: var(--font-sans);">
+                        <input type="tel" id="memPhone" placeholder="Phone Number" required
+                            style="padding: 1rem; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.1); color: var(--obsidian); font-family: var(--font-sans);">
+                        <button type="submit" class="btn btn-dark" id="memSubmitBtn">Apply for Membership</button>
+                    </form>
+                    <div id="memStatus" style="font-size: 0.9rem; margin-top: -1rem; margin-bottom: 1rem;"></div>
+                    <ul class="vip-list">
+                        <li>Priority Access to Limited Releases</li>
+                        <li>Personal In-House Styling</li>
+                        <li>Private Events & Runway Shows</li>
+                        <li>The Valentia Mirror Experience</li>
+                    </ul>
+                </div>
+                <div class="vip-visual fade-up" style="transition-delay: 0.3s;">
+                    <div
+                        style="background: var(--obsidian); height: 500px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <span
+                            style="font-family: var(--font-serif); font-size: 15rem; color: rgba(197, 160, 33, 0.1);">V</span>
+                        <div
+                            style="position: absolute; border: 1px solid var(--gold); padding: 3rem; transform: rotate(-5deg);">
+                            <h3 style="color: var(--gold); letter-spacing: 0.5em;">VALENTIA</h3>
+                            <p style="color: var(--ivory); font-size: 0.7rem; margin-top: 1rem;">ELITE MEMBER CARD</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 5rem 0; background: var(--obsidian); border-top: 1px solid var(--glass-border);">
+        <div class="container">
+            <div
+                style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 3rem;">
+                <div>
+                    <h3 style="color: var(--gold); margin-bottom: 1.5rem; letter-spacing: 0.2em;">VALENTIA</h3>
+                    <p style="max-width: 300px; font-size: 0.9rem; color: #888;">
+                        Tamil Nadu's premier fashion destination. Exceptional craftsmanship, timeless elegance.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Contact Us</h4>
+                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <input type="email" id="contactEmail" placeholder="Your Email" required
+                            style="padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid #444; color: var(--ivory); font-family: var(--font-sans);">
+                        <textarea id="contactMessage" placeholder="Message" required
+                            style="padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid #444; color: var(--ivory); font-family: var(--font-sans); resize: none;"></textarea>
+                        <button type="submit" class="btn" style="padding: 0.5rem; font-size: 0.8rem;"
+                            id="contactSubmitBtn">Send</button>
+                    </form>
+                    <div id="contactStatus" style="font-size: 0.8rem; margin-top: 0.5rem;"></div>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Boutique</h4>
+                    <p style="color: #888; font-size: 0.9rem;">Chennai Main Road,<br>Madurai, Tamil
+                        Nadu<br><br>concierge@valentia.luxury<br>+91 98765 43210</p>
+                </div>
+            </div>
+            <div
+                style="margin-top: 5rem; text-align: center; border-top: 1px solid var(--glass-border); padding-top: 2rem;">
+                <p style="color: #444; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;">
+                    © 2026 VALENTIA LUXURY INC. ALL RIGHTS RESERVED.
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <script src="app.js"></script>
 </body>
+
 </html>
