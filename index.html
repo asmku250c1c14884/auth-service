@@ -66,7 +66,7 @@
                     <div class="item-overlay">
                         <span class="item-brand">Signature Line</span>
                         <h3 class="item-name">The Obsidian Silk Wrap</h3>
-                        <a href="#" class="btn" style="padding: 0.8rem 2rem;">Acquire</a>
+                        <button class="btn acquire-btn" data-item="The Obsidian Silk Wrap" style="padding: 0.8rem 2rem;">Acquire</button>
                     </div>
                 </div>
 
@@ -75,7 +75,7 @@
                     <div class="item-overlay">
                         <span class="item-brand">Elite Collection</span>
                         <h3 class="item-name">Midnight Linen Ensemble</h3>
-                        <a href="#" class="btn" style="padding: 0.8rem 2rem;">Acquire</a>
+                        <button class="btn acquire-btn" data-item="Midnight Linen Ensemble" style="padding: 0.8rem 2rem;">Acquire</button>
                     </div>
                 </div>
             </div>
@@ -165,6 +165,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- Beautiful Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Purchase Modal -->
+    <div id="purchaseModal" class="modal-backdrop">
+        <div class="modal-content glass-panel" id="purchaseModalContent">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-body">
+                <p style="color: var(--gold); letter-spacing: 0.2em; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Private Acquisition</p>
+                <h3 id="modalItemName" style="font-size: 2rem; margin-bottom: 1rem;">Item Name</h3>
+                <p style="margin-bottom: 2rem; color: #aaa; font-size: 0.95rem;">Secure this highly covetable piece. Our concierge will contact you to finalize the acquisition details and arrange private delivery.</p>
+                <form id="purchaseForm" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <input type="text" id="purchaserName" placeholder="Full Name" required class="premium-input">
+                    <input type="email" id="purchaserEmail" placeholder="Email Address" required class="premium-input">
+                    <button type="submit" class="btn" id="purchaseSubmitBtn" style="width: 100%; margin-top: 1rem;">Confirm Interest</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
