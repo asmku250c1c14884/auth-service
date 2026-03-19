@@ -305,6 +305,78 @@ nav.scrolled {
     color: var(--obsidian);
 }
 
+/* --- About Section --- */
+
+.about-section {
+    background: var(--obsidian);
+    border-top: 1px solid var(--glass-border);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.about-story h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--gold);
+}
+
+.about-story p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.about-story em {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.about-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.pillar {
+    padding: 2rem;
+    border: 1px solid var(--glass-border);
+    position: relative;
+    transition: all 0.4s var(--transition);
+}
+
+.pillar:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px var(--gold-glow);
+}
+
+.pillar-number {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: rgba(197, 160, 33, 0.15);
+    font-weight: 900;
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+}
+
+.pillar h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--ivory);
+}
+
+.pillar p {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* --- Animations --- */
 
 .fade-up {
@@ -321,6 +393,11 @@ nav.scrolled {
 @media (max-width: 768px) {
     .vip-content {
         grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 
     .hero h1 {

@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 6. Form Submission Handlers
-    const API_URL = '/api/valentia';
+    const API_URL = 'http://localhost:8080/api/valentia';
 
     const membershipForm = document.getElementById('membershipForm');
     if (membershipForm) {
